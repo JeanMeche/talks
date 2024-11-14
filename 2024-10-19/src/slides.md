@@ -131,7 +131,7 @@ glow: bottom
 
 <div transition duration-500 :class="$clicks === 0 ? 'translate-x-26 translate-y-20' : ''">
 
-# Yak{.important-text-3em}
+# Bundle size{.important-text-3em}
 
 <div v-click forward:delay-600>
 
@@ -146,7 +146,7 @@ glow: bottom
 
 <div transition duration-500 :class="$clicks === 0 ? 'translate-x--10 translate-y-20' : ''">
 
-# Shaving{.important-text-3em}
+# At runtime{.important-text-3em}
 
 <div v-click>
 
