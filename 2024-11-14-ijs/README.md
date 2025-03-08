@@ -1,5 +1,5 @@
-# Ng Poland 2024 - Angular Compiler
+# iJS Munich 2024 - Modern Reactivity
 
-2024/11/06 - NG Poland
+2024/11/14 - iJS Munich
 
-[NG Poland 2024](https://ng-poland.pl/)
+[iJS Munich](https://javascript-conference.com/munich/)

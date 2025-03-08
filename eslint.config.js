@@ -1,6 +1,9 @@
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 export default antfu({
+  stylistic: {
+    semi: true,
+  },
   vue: true,
   formatters: {
     css: true,
@@ -14,4 +17,4 @@ export default antfu({
   ignores: [
     '**/demo/eslint/**',
   ],
-})
+});
