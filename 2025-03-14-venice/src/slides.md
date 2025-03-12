@@ -80,10 +80,12 @@ glowSeed: 14
 🚂 Random dude who often codes on the train <br>
 {Angular} Team / OSS <br>
 
-<!-- TODO FULLTIME-->
+<v-click>
+ 🚀 Now working full time on Angular & Tooling
+</v-click>
 </div>
 
-<div my-10 w-min flex="~ gap-1" items-center justify-center>
+<div my-10 w-min flex="~ gap-1" items-center justify-center v-click>
   <div i-ri-user-3-line op50 ma text-xl />
   <div><a href="https://riegler.fr" target="_blank" class="border-none! font-300">riegler.fr</a></div>
   <div i-ri-linkedin-line op50 ma text-xl ml4/>
@@ -140,7 +142,7 @@ class: center
 </div>
 </div>
 
-<img src="/renaissance-2.jpg" alt="Renaissance">
+![](./renaissance-2.jpg){.rounded-lg.shadow.border.border-main.m-auto}
 
 </div>
 
@@ -168,7 +170,7 @@ layout: fact
 layout: center
 ---
 
-![](./documentary.png)
+![](./documentary.png){.rounded-lg.shadow.border.border-main.m-auto}
 
 ---
 layout: center
@@ -197,6 +199,19 @@ layout: center
 * SSR / Hydration
 
 ---
+layout: cover
+---
+
+# What is the most impactful change we can do to the framework ?
+
+<!--
+How can we futureproof the framework
+
+and make angular part of the new
+generation of frameworks
+-->
+
+---
 class: flex flex-col
 ---
 
@@ -208,11 +223,17 @@ class: flex flex-col
 <!-- https://x.com/sarah_edo/status/1628065696247857152 -->
 </div>
 
+<!--
+Sarah
+
+Senior Director of Engineering
+-->
+
 ---
 layout: cover
 ---
 
-# Signals,<br> a new reactivity model
+# Signals,<br> A new reactivity model
 
 ---
 layout: fact
@@ -230,7 +251,7 @@ layout: fact
 layout: cover
 ---
 
-# The need for a new model
+# The need for a new reactivity model
 
 <v-click>
 
@@ -239,13 +260,17 @@ layout: cover
 </v-click>
 
 ---
+layout: cover
+---
 
 # Zone.js
 
-* Tells Angular when something has change
+* Tells <span i-devicon-angular inline-block scale-110 translate-y-0.5 ml-1 /> Angular when something has change
 
 * Angular synchronize the data and the DOM
 
+---
+layout: cover
 ---
 
 # Downsides of Zone.js
@@ -253,6 +278,8 @@ layout: cover
 *  30Kb of eagerly loaded library
 
 * Monkey patches browser APIs (global side effects)
+
+* Those patched API will trigger change cycles
 
 * Runtime context (Zones)
 
@@ -278,13 +305,19 @@ layout: cover
 
 # Engineering problem
 
+<v-click>
+
 ## Complexe vs Complicated
+</v-click>
 
 ---
 
-<div grid="~ cols-2 gap-10" h-full font-size-8>
+# Complexe vs Complicated
+
+<div grid="~ cols-2 gap-10" mt-16 h-full text-4xl>
+<v-clicks>
 <div>
-  <h1>Complicated</h1>
+  <h2>Complicated</h2>
 
   * Takes time ⏳
 
@@ -292,7 +325,7 @@ layout: cover
 </div>
 
 <div>
-  <h1>Complex</h1>
+  <h2>Complex</h2>
 
   * Like a plate of 🍝
 
@@ -300,12 +333,14 @@ layout: cover
 
   * Relationships
 
+  * full of uncertainty and contradictions.
+
   * Unknown outcome ❓
 
 </div>
 
+</v-clicks>
 </div>
-
 <!--
 Complicated: Like building a plane
 
@@ -313,6 +348,8 @@ Complex:
 En y plantant sa fourchette, il est très difficile de prévoir combien de pâtes on va attraper et quelle va être la forme de celles qui resteront dans l’assiette
 -->
 
+---
+layout: cover
 ---
 
 # Ideas
@@ -365,18 +402,20 @@ layout: 'intro'
 # Signals
 ## A new reactive primitive
 
-* Know when they're read
-* Know when they're mutated
+* Know when they're read : `mySignal()`
+* Know when they're mutated : `mySignal.set()` / `mySignal.update()`
 
+---
+layout: cover
 ---
 
 # v16 - First primitives
 
-* `signal()`
+* `signal()`, defines a signal
 
-* `computed()`
+* `computed()`, defines a derivation
 
-* `effect()`
+* `effect()`, schedules a callback on changes
 
 ---
 layout: fact
@@ -417,7 +456,7 @@ flowchart TD
 ### ➡️ 2-way data flow (👋 NG0100)
 <br>
 
-### ➡️ Enabled optimizations
+### ➡️ Enables perf optimizations
 </div>
 </div>
 
@@ -438,9 +477,12 @@ layout: cover
 
 # Expanding reactivity
 
-## signal inputs, model & view queries
+## `input()`, `model()` & view queries (`viewChild`, `contentChild` etc.)
 
-<img src="./input-issue.png" width="600" pt-12 v-click/>
+<v-click>
+
+![](./input-issue.png){.w-100.rounded-lg.shadow.border.border-main.mt-12}
+</v-click>
 
 ---
 layout: cover
@@ -451,6 +493,8 @@ layout: cover
 ## Google Fonts App
 
 ---
+layout: cover
+---
 
 # Collected experience
 
@@ -458,15 +502,23 @@ layout: cover
 
 * `effect()`-based pattern
 
+* Bonus: Made the app Zoneless
+
 ---
 layout: cover
 ---
 
 # `effect()` bad
 
-<img src="./effect/alex.png" width="500" absolute rotate-15 top-35 left-60 v-click/>
-<img src="./effect/josh.png" width="500" absolute rotate--15 top-25 left-60 v-click/>
-<img src="./effect/manfred.png" width="600" absolute rotate-15 top-35 left-50 v-click/>
+<span></span>
+<v-clicks>
+
+![](./effect/alex.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-60}
+
+![](./effect/josh.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate--15.top-25.left-60}
+
+![](./effect/manfred.png){.w-600px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-50}
+</v-clicks>
 
 ---
 layout: cover
@@ -478,7 +530,7 @@ layout: cover
 <br>
 
 * Writable state
-* Sync'd with other signals
+* Sync'd when source signals change
 * Previous value
 
 ## Advanced derivation
@@ -494,6 +546,113 @@ layout: cover
 
 ## We still need something for async derivation !
 </v-click>
+
+---
+layout: cover
+---
+
+# What asynchrony entails
+
+## Designing APIs for Asynchrony
+
+---
+layout: center
+class: large-code
+---
+
+# Observables <span v-click=3> are both <span text-lime italic>sync</span> & <span text-purple italic>async</span> !</span>
+
+````md magic-move
+```ts
+myObservable = myService.getSomethingAsync();
+
+myObservable.subscribe(console.log);
+```
+```ts
+myObservable = myService.getSomethingAsync();
+
+// If it's a Http Request, it'll be async
+myObservable.subscribe(console.log);
+```
+```ts
+myObservable = myService.getSomethingAsync();
+
+// If it's a Http Request, it'll be async
+myObservable.subscribe(console.log);
+
+// If it's a replay subject, It could be sync
+myObservable.subscribe(console.log);
+```
+````
+
+---
+layout: cover
+---
+
+> If you have an API which takes a callback,
+>
+> and sometimes that callback is called <u>immediately</u>,
+>
+> and other times that callback is called <u>at some point in the future</u>,
+>
+> then you will render any code using this API impossible to reason about, and cause the release of <b>**Zalgo**</b>.
+
+<style>
+blockquote {
+  font-size: 24px;
+  line-height: 24px;
+  p {
+    margin: 8px 0;
+  }
+}
+</style>
+
+<a absolute bottom-8 href="https://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/">Callbacks, synchronous and asynchronous, by Havoc</a>
+
+---
+layout: center
+class: large-code
+---
+
+# To avoid the release of Zalgo
+
+```js
+let after = false;
+callbackTaker(() => {
+  assert(after === true); // Async
+});
+after = true;
+```
+
+OR
+
+```js
+let after = false;
+callbackTaker(() => {
+  assert(after === false); // Sync
+});
+after = true;
+```
+
+<!-- In other words, to avoid the release of Zalgo, exactly one of the following must be true: -->
+
+---
+class: flex flex-col
+---
+
+# Release of Zalgo
+
+<div flex justify-center m-auto text-4xl>
+,̴͇̺͖̥̔̄̐̅͐̑̑̈́̅̍͑̽̽͋̒̀ ̴̡̨̟͖̹͔͙̰͙̔H̵̨̛̹͍̳͚͙͚̗̹̙̘͌̿̉̏̂͒̽̈́̈̀̇͐̐̚͝e̸͕͇̯̦̳̳̝̲̬̳̳̤̺͙̽̎͊͑̉͊̑͠ ̵̼͈̻̫͙̱̳̱̜̞͖̆͒͂̋̾͆́̾̈̆̐͝͝͝w̵͔̾̈́̈́́͛͛́̒̈̕̚͝͝h̶̫͉͇̹͙͍̪̉o̸͕̟͖̮̎͂̓̇͛̈́̋́͌͆̀̔̈́ ̷̳̌̍͋̓̄̉̒̂ó̶͓̜͌̀̾̆̄n̵̢̡̛̛̻͖͍̻͇̹̥̞͔̼̝̹͖̙̎̈́͊͋͗̿̓͑̐ͅl̸̛̪̗̮͖͂̉̄́̓̐͑̊͋̽̕͘͠y̶̢̳̯̞̲̠̻̲͙̜̱̆͊̈́̃͆̀̑͌̉ͅ ̴̧̡̢̨̙̪͇͉̤̭̱͐̾͋̑̾̑̊͊̈́̃̚͝p̴̦̪̱̂̑́͒̈́̍̍̀́͛͘̚͠͝r̸̜̖̍̂̉͒͛̌̅̽o̵̢̞̪̗̥͈̻͈̙̭̱̦͖̤̟͒̈́͊m̸̥͖͊͗̃̅̉̇͛̅̐͗͆͂̇̆̕͝i̷̟̞̲͙̰̋͛̓̐̂͊̀̑͗͠s̸͔̟̙͗̉̇̈́̉͗͊͝ę̵̡̙͖̳͚̫̟͇͙̺́̍͆̅̀͑̋̃̈́̌̈̾͠ͅş̴̛̛͇̳̘͋̌̅͆̓̀̈́̈́̂̎͘͠ ̶̨̛̦̬͓̖̪̪̞̩̥̾̉͐͊̍m̸̡͈̦͓̞͎̟̼̠̱̝̪̄͘a̴̪̻̥͎͚͇̯͚̞̙̤̳̔ḑ̵̲̻̼͔̍̉͗̈͝n̸̡̗̱͕̠̬̼̠̞̪̱͇̣̄̆͜ͅë̶̛͇̭̖́̑̂̓̐̐͑͘ş̷̢̨̹̝͊́̒͐s̶̨̡̖̻̦̦͙̭̬̝͎̹̍͊̉̏̌̀͑̐̓͝
+</div>
+
+---
+layout: cover
+---
+
+# Async APIs do not go faster.<br>They go slower.
+
+## Our Async signal should be ... synchronous !
 
 ---
 layout: fact
@@ -512,9 +671,10 @@ layout: intro
 
 # Experimental
 
-## Basically feature that will change
+## Basically features that will change/evolve a bit
+<br>
 
-## `resource` / `rxResource`
+## `resource()` / `rxResource()` / `httpResource()`
 <br><br><br>
 <div v-click>
 
@@ -525,12 +685,126 @@ layout: intro
 
 # Resource
 
+* Always has a synchronous value (could be `undefined`)
+* Status flag
+* Reactivity
+
+## Today, it's for build asynchronous derivation
+
+<style>
+  ul { margin-top: 12px; }
+  li { margin: 4px 0; font-size: 24px; }
+</style>
+
+---
+layout: center
+---
+
+# Resource
+
+```mermaid {scale: 2}
+flowchart LR
+s([MyState]) --[AsyncLoading]--> E([StateWithAsyncData])
+```
+
+---
+layout: center
+---
+
+# APIs
+
+```ts {*}{class:'!children:text-xl'}
+resource({
+  request: () => { /* signals to return params  */ }
+  loader: (params) => { /* async load with the params */}
+});
+
+rxResource({
+  request: () => { /* signals to return params */}
+  loader: (params) => { /* observable with the params */}
+})
+
+httpResource(() => `https://swapi.dev/api/people/${peopleId()}`)
+```
+
+---
+layout: fact
+---
+
+# Declarative
+
+---
+layout: cover
+---
+
+# What about sending data ? 🤔
+
+<v-click>
+
+## I want to send my form 📋 !!!!
+</v-click>
+
+---
+
+![](./obiwan.png){.w-800.rounded-lg.shadow.border.border-main.m-auto}
+
+<h1 v-click pt-8>At least not for now </h1>
+
+---
+layout: cover
+---
+
+<style>
+h1 { font-size: 48px !important; }
+</style>
+
+<h1> Overall picture might not be complete</h1>
+<br><br><br><br>
+<h1 v-click>The data loading "story" is incomplete</h1>
+
+---
+layout: fact
+---
+
+# There is more.
+
+<v-click>
+
+## Angular understand the signal graph
+</v-click>
+
+---
+layout: cover
+---
+
+# Perspectives
+
+* Blocking and non-blocking data dependencies ?
+
+* Prefetching data dependencies
+
+* Resource streaming from SSR
+
+---
+layout: cover
+---
+
+* Template API for awaiting data
+
+---
+layout: fact
+---
+
+# Please give us your feedback on the RFC
+
+## Open til then end of the month
+
 ---
 layout: intro
 class: text-center pb-5
 ---
 
-# Thank you!
+# Thank you for being such a great community 🙌
 
 Slides on [riegler.fr/talks](https://riegler.fr/talks)
 
