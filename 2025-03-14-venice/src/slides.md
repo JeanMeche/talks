@@ -6,7 +6,7 @@ colorSchema: dark
 transition: fade-out
 mdc: true
 glowSeed: 2
-title: Async something
+title: Build reactivity
 favicon: "https://riegler.fr/favicon.ico"
 ---
 
@@ -81,7 +81,7 @@ glowSeed: 14
 {Angular} Team / OSS <br>
 
 <v-click>
- 🚀 Now working full time on Angular & Tooling
+ 🚀 Now working full time on Angular, Docs & Tooling
 </v-click>
 </div>
 
@@ -142,7 +142,7 @@ class: center
 </div>
 </div>
 
-![](./renaissance-2.jpg){.rounded-lg.shadow.border.border-main.m-auto}
+![](/renaissance.jpg){.rounded-lg.shadow.border.border-main.m-auto}
 
 </div>
 
@@ -170,7 +170,7 @@ layout: fact
 layout: center
 ---
 
-![](./documentary.png){.rounded-lg.shadow.border.border-main.m-auto}
+![](/documentary.png){.rounded-lg.shadow.border.border-main.m-auto}
 
 ---
 layout: center
@@ -178,7 +178,7 @@ layout: center
 
 <div w-136>
 
-![](./alex-skill.png)
+![](/alex-skill.png)
 <!-- https://x.com/synalx/status/1882879962547659078 -->
 </div>
 
@@ -219,7 +219,7 @@ class: flex flex-col
 
 <div w-136 v-click m-auto>
 
-![](./sarah-renaissance.png)
+![](/sarah-renaissance.png)
 <!-- https://x.com/sarah_edo/status/1628065696247857152 -->
 </div>
 
@@ -242,9 +242,9 @@ layout: fact
 # What's reactivity ?
 
 <div flex gap-24 justify-center mt-24 v-click>
-  <img src="./reactivity/code2.png" width="128">
-  <img src="./reactivity/tree2.png" width="128">
-  <img src="./reactivity/sync.png" width="128">
+  <img src="/reactivity/code2.png" width="128">
+  <img src="/reactivity/tree2.png" width="128">
+  <img src="/reactivity/sync.png" width="128">
 </div>
 
 ---
@@ -377,7 +377,7 @@ layout: cover
 
 <div w-136 m-auto mt-12>
 
-![](./alex-jsx.png)
+![](/alex-jsx.png)
 <!-- https://x.com/synalx/status/1720509219752017949 -->
 </div>
 
@@ -481,7 +481,7 @@ layout: cover
 
 <v-click>
 
-![](./input-issue.png){.w-100.rounded-lg.shadow.border.border-main.mt-12}
+![](/input-issue.png){.w-100.rounded-lg.shadow.border.border-main.mt-12}
 </v-click>
 
 ---
@@ -513,11 +513,11 @@ layout: cover
 <span></span>
 <v-clicks>
 
-![](./effect/alex.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-60}
+![](/effect/alex.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-60}
 
-![](./effect/josh.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate--15.top-25.left-60}
+![](/effect/josh.png){.w-500px.rounded-lg.shadow.border.border-main.absolute.rotate--15.top-25.left-60}
 
-![](./effect/manfred.png){.w-600px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-50}
+![](/effect/manfred.png){.w-600px.rounded-lg.shadow.border.border-main.absolute.rotate-15.top-35.left-50}
 </v-clicks>
 
 ---
@@ -746,7 +746,7 @@ layout: cover
 
 ---
 
-![](./obiwan.png){.w-800.rounded-lg.shadow.border.border-main.m-auto}
+![](/obiwan.png){.w-800.rounded-lg.shadow.border.border-main.m-auto}
 
 <h1 v-click pt-8>At least not for now </h1>
 
@@ -777,19 +777,21 @@ layout: fact
 layout: cover
 ---
 
-# Perspectives
+# Potential advancements
 
-* Blocking and non-blocking data dependencies ?
+* Template syntax (`@async`/`@error` blocks)
+
+* Router integration
+
+* Blocking and non-blocking data dependencies
 
 * Prefetching data dependencies
 
+* Server Only loading logic
+
 * Resource streaming from SSR
 
----
-layout: cover
----
-
-* Template API for awaiting data
+* Compiler magic to improve DX
 
 ---
 layout: fact
@@ -797,7 +799,7 @@ layout: fact
 
 # Please give us your feedback on the RFC
 
-## Open til then end of the month
+## Open until the end of the month
 
 ---
 layout: intro

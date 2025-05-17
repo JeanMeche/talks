@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /talks/2024/austria/ --out ../../dist/2024/austria",
-    "export": "slidev export --per-slide --output ../2024-11-06-austria-en.pdf"
+    "build": "slidev build --base /talks/2025/venice/ --out ../../dist/2025/venice",
+    "export": "slidev export --per-slide --output ../2025-03-14-venice-en.pdf"
   }
 }

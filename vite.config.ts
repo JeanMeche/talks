@@ -1,6 +1,6 @@
-import MarkdownItMagicLink from 'markdown-it-magic-link'
-import { defineConfig } from 'vite'
-import '@slidev/cli'
+import MarkdownItMagicLink from 'markdown-it-magic-link';
+import { defineConfig } from 'vite';
+import '@slidev/cli';
 
 export default defineConfig({
   optimizeDeps: {
@@ -15,6 +15,7 @@ export default defineConfig({
       markdownItSetup(md) {
         md.use(MarkdownItMagicLink, {
           linksMap: {
+            'GitHub': 'https://github.com/github/docs',
             'Angular': 'https://github.com/angular/angular',
             'Typescript': 'https://github.com/microsoft/typescript',
             'Vitest': 'https://github.com/vitest-dev/vitest',
@@ -32,9 +33,10 @@ export default defineConfig({
             'Netlify': { link: 'https://netlify.com', imageUrl: 'https://github.com/netlify.png' },
             'Stackblitz': { link: 'https://stackblitz.com', imageUrl: 'https://github.com/stackblitz.png' },
             'Vercel': { link: 'https://vercel.com', imageUrl: 'https://github.com/vercel.png' },
+            'Google': { link: 'https://google.com', imageUrl: 'https://github.com/google.png' },
           },
-        })
+        });
       },
     },
   },
-})
+});
